@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Quafzi_CustomerOrderInfo>
+            <version>0.1.0</version>
+        </Quafzi_CustomerOrderInfo>
+    </modules>
+    <global>
+        <blocks>
+            <quafzi_customerorderinfo>
+                <class>Quafzi_CustomerOrderInfo_Block</class>
+            </quafzi_customerorderinfo>
+        </blocks>
+        <helpers>
+            <quafzi_customerorderinfo>
+                <class>Quafzi_CustomerOrderInfo_Helper</class>
+            </quafzi_customerorderinfo>
+        </helpers>
+        <models>
+            <quafzi_customerorderinfo>
+                <class>Quafzi_CustomerOrderInfo_Model</class>
+            </quafzi_customerorderinfo>
+        </models>
+        <resources>
+            <quafzi_customerorderinfo_setup>
+                <setup>
+                    <module>Quafzi_CustomerOrderInfo</module>
+                </setup>
+            </quafzi_customerorderinfo_setup>
+        </resources>
+    </global>
+</config>

@@ -1,0 +1,15 @@
+{
+    "name": "quafzi/magento-customer-order-info",
+    "license": "MIT",
+    "type": "magento-module",
+    "description": "Show order information in Magento adminhtml customer view",
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "Installer for Magento modules"
+    },
+    "authors":[
+        {
+            "name":"Thomas Birke",
+            "email":"tbirke@netextreme.de"
+        }
+    ]
+}
