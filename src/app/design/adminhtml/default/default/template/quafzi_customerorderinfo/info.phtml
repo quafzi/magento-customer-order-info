@@ -1,0 +1,43 @@
+<?php
+/**
+ * @package   Quafzi_CustomerOrderInfo
+ * @copyright 2014
+ * @author    Thomas Birke <tbirke@netextreme.de>
+ * @license   MIT
+ *
+ * @see Quafzi_CustomerOrderInfo_Block_Info
+ */
+?>
+<div class="entry-edit">
+    <div class="entry-edit-head"><h4 class="icon-head head-customer-view"><?php echo Mage::helper('customer')->__('Order Information') ?></h4></div>
+    <fieldset>
+        <table cellspacing="2" class="box-left">
+            <?php $orders = $this->getOrderCollection(); ?>
+            <tr>
+                <td><strong><?php echo Mage::helper('adminhtml')->__('Number of Orders') ?></strong></td>
+                <td><?php echo $orders->count(); ?></td>
+            </tr>
+            <tr>
+                <td><strong><?php echo Mage::helper('salesrule')->__('total amount') ?></strong></td>
+                <td><?php echo Mage::helper('core')->formatCurrency($this->getOrderCollectionGrandTotal($orders)); ?></td>
+            </tr>
+        </table>
+        <table cellspacing="2" class="box-right">
+            <tr>
+                <th style="text-align:right"><?php echo $this->__('Order State'); ?></th>
+                <th style="text-align:right"><?php echo Mage::helper('sales')->__('Orders'); ?></th>
+                <th></th>
+            </tr>
+            <?php $ordersByState = $this->getOrdersGroupedByState(); ?>
+            <?php foreach ($ordersByState as $state => $orders): ?>
+            <tr>
+                <td style="text-align:right"><strong><?php echo $this->__($state) ?></strong></td>
+                <td style="text-align:right; padding-right: 10px"><?php echo $orders->count(); ?></td>
+                <td>(<?php echo Mage::helper('core')->formatCurrency($this->getOrderCollectionGrandTotal($orders)); ?>)</td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+    </fieldset>
+</div>
+<div class="clear"></div>
+<br/>

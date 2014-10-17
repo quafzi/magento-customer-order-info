@@ -1,2 +1,3 @@
 src/app/code/community/Quafzi/CustomerOrderInfo     app/code/community/Quafzi/CustomerOrderInfo
+src/app/design/adminhtml/default/default/template/quafzi_customerorderinfo    app/design/adminhtml/default/default/template/quafzi_customerorderinfo
 src/app/etc/modules/*    app/etc/modules/

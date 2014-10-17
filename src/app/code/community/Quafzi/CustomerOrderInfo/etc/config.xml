@@ -29,4 +29,26 @@
             </quafzi_customerorderinfo_setup>
         </resources>
     </global>
+    <adminhtml>
+        <events>
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <add_order_info>
+                        <type>singleton</type>
+                        <class>quafzi_customerorderinfo/observer</class>
+                        <method>addAdminhtmlCustomerOrderInfo</method>
+                    </add_order_info>
+                </observers>
+            </core_block_abstract_to_html_after>
+        </events>
+        <translate>
+            <modules>
+                <Maxxfit_Dropshipping>
+                    <files>
+                        <default>Maxxfit_Dropshipping.csv</default>
+                    </files>
+                </Maxxfit_Dropshipping>
+            </modules>
+        </translate>
+    </adminhtml>
 </config>
